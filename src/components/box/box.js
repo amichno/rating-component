@@ -1,10 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 
-const wrapper = styled.div`
+const Wrapper = styled.div`
     background-color: black;
     width:100vw;
-    height: 100%;
+    height: 100vh;
+
     @media (max-width: 375px){
         width:100vw;
         height: 100%;
@@ -16,18 +17,21 @@ const wrapper = styled.div`
 
     }
     @media (min-width: 1440px){
-
+        background-color: black;
+        width:100vw;
+        height: 100vh;
     }
 `;
 
-const box = () =>{
+const Box = () =>{
     return(
-        <wrapper>
-
-        </wrapper>
+        <div>
+            cokolwiek
+        </div>
     )
+    
 }
 
-export default box;
+export default Box;
 
  
