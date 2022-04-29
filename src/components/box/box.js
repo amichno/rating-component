@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Logo from "../logo/logo";
 
 const Back = styled.div`
     background-color: black;
@@ -11,7 +12,7 @@ const Back = styled.div`
 
     @media (max-width: 375px){
         width:100vw;
-        height: 100%;
+        height: 100vh;
     }
     @media (min-width: 375px) and (max-width: 992px){
 
@@ -29,20 +30,23 @@ const Back = styled.div`
 const Wrapper = styled.div`
     background-color:hsl(216, 12%, 8%);
     border-radius: 5%;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 2rem;
     @media (max-width: 375px) {
         width: 90%;
-        height: 60%;
+        height: 50%;
         overflow-y: scroll;
     }
 
     @media (min-width:375px) and (max-width: 992px) {
         width: 40%;
         max-width: 450px;
-        height: 40%;
+        height: 50%;
         
     }
     @media (min-width:992px){
-        width: 30%;
+        width: 40%;
         max-width: 350px;
         height: 50%;
         max-height: 350px;
@@ -55,7 +59,7 @@ const Box = () =>{
     return(
         <Back>
             <Wrapper>
-
+            <Logo />
             </Wrapper>
         </Back>
     )
