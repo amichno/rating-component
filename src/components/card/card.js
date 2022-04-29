@@ -4,14 +4,13 @@ import styled from "styled-components";
 const TextInvitation = styled.div`
     padding-top:2rem;
     width:100%;
-    height: 80%;
+    height: 55%;
     color: white;
     p {
         padding-top:1rem;
         color:hsl(217, 12%, 63%);
     }
 `;
-
 const Card = (props) => {
     const textCard = props;
 
