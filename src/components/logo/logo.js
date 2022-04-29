@@ -20,7 +20,6 @@ const Logo = () =>{
         <Star>
         </Star>
     )
-
 }
 
 export default Logo;

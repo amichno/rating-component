@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import Logo from "../logo/logo";
+import Card from "../card/card";
+import { invitation } from "../../data/invitationText";
 
 const Back = styled.div`
     background-color: black;
@@ -41,6 +43,7 @@ const Wrapper = styled.div`
 
     @media (min-width:375px) and (max-width: 992px) {
         width: 40%;
+        min-width: 300px;
         max-width: 450px;
         height: 50%;
         
@@ -60,6 +63,7 @@ const Box = () =>{
         <Back>
             <Wrapper>
             <Logo />
+            <Card inv ={invitation}/>
             </Wrapper>
         </Back>
     )
