@@ -41,26 +41,46 @@ const Butto = styled.button`
     border-radius: 100%;
     border:0;
     background-color: hsl(213, 19%, 18%);  
+    cursor: pointer;
     &:hover{
         background-color: hsl(25, 97%, 53%);
         color: white;
     }
 `;
 
+const ButtoActive = styled.button`
+    width: 3rem;
+    height: 3rem;
+    border-radius: 100%;
+    border:0;
+    background-color: lightgray; 
+    cursor: pointer;
+    &:hover{
+        background-color: hsl(25, 97%, 53%);
+        color: white;
+    }
+`;
+
+
 const Score = (props) => {
 
     const ListScores = props.scores;
-    //const SetRate = props.onClick;
 
     return(
         <Scale>
             <List>                
-                    {ListScores.map(score =>
-                        <ListItem >
-                            <Butto onClick = {()=>props.onClick(score)}>{score}</Butto>
-                          
-                        </ListItem>                       
-                    )}               
+                    {ListScores.map(score =>{
+                                if(props.rate === score)
+                                return( <ListItem >
+                                                <ButtoActive onClick = {()=>props.onClick(score)} >{score} </ButtoActive>
+                                        </ListItem> )                         
+                                else
+                                  return(
+                                        <ListItem >
+                                                <Butto onClick = {()=>props.onClick(score)} >{score}</Butto> 
+                                        </ListItem>)
+                                             
+                   })}              
             </List>
         </Scale>
     )
