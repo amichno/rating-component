@@ -72,7 +72,7 @@ const Box = () =>{
 
     function onClickRate(newRate){
        setRate(newRate)
-       console.log('setrate '+rate)
+       //console.log('setrate4 '+newRate)
     }
 
     return(

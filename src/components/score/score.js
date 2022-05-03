@@ -58,7 +58,7 @@ const Score = (props) => {
                     {ListScores.map(score =>
                         <ListItem >
                             <Butto onClick = {()=>props.onClick(score)}>{score}</Butto>
-                            
+                          
                         </ListItem>                       
                     )}               
             </List>
