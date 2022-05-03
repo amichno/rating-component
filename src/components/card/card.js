@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const TextInvitation = styled.div`
-    padding-top:2rem;
+    padding-top:1.5rem;
     width:100%;
     height: 55%;
     color: white;
@@ -12,12 +12,12 @@ const TextInvitation = styled.div`
     }
 `;
 const Card = (props) => {
-    const textCard = props;
+    const textCard = props.inv[0];
 
     return(
         <TextInvitation>
-            <h1>{textCard.inv[0].caption}</h1>
-            <p>{textCard.inv[0].text}</p>
+            <h1>{textCard.caption}</h1>
+            <p>{textCard.text}</p>
         </TextInvitation>
     )
 };

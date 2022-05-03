@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import Logo from "../logo/logo";
 import Card from "../card/card";
@@ -67,12 +67,22 @@ const Wrapper = styled.div`
 `;
 
 const Box = () =>{
+
+    const [rate, setRate] = useState(0);
+
+    function onClickRate(newRate){
+       setRate(newRate)
+       //console.log('setrate4 '+newRate)
+    }
+
     return(
+        
         <Back>
             <Wrapper>
+                
                 <Logo />
                 <Card inv ={invitation}/>
-                <Score scores = {scores}/>
+                <Score scores = {scores} onClick={onClickRate}/>
             </Wrapper>
         </Back>
     )
