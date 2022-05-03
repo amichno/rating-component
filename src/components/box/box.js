@@ -82,7 +82,7 @@ const Box = () =>{
                 
                 <Logo />
                 <Card inv ={invitation}/>
-                <Score scores = {scores} onClick={onClickRate}/>
+                <Score scores={scores} onClick={onClickRate} rate={rate}/>
             </Wrapper>
         </Back>
     )
