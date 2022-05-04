@@ -6,6 +6,7 @@ const Scale = styled.div`
     width: 100%;
     height: 3rem;
     padding-top: 15%;
+    padding-bottom: 15%;
 `;
 
 const List = styled.ul`
@@ -71,12 +72,12 @@ const Score = (props) => {
             <List>                
                     {ListScores.map(score =>{
                                 if(props.rate === score)
-                                return( <ListItem >
+                                return( <ListItem key={score}>
                                                 <ButtoActive onClick = {()=>props.onClick(score)} >{score} </ButtoActive>
                                         </ListItem> )                         
                                 else
                                   return(
-                                        <ListItem >
+                                        <ListItem key={score}>
                                                 <Butto onClick = {()=>props.onClick(score)} >{score}</Butto> 
                                         </ListItem>)
                                              
