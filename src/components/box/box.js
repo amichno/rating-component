@@ -78,26 +78,26 @@ const Box = () =>{
     }
 
     function onClickVote(){
-        setVoted('flex');
+        setVoted('voted');
     }
 
-    return(
-        
-        <Back>
-            <Wrapper>
+
+    if(voted !== 'voted')
+        return(    
+            <Back>
+                <Wrapper>
                     <Logo/>
-                    <Card inv ={invitation}/>
-                    <Score scores={scores} onClick={onClickRate} rate={rate}/>
-                    <ButtonSubmit voted={voted} onClick={onClickVote}/>
-                    
-            
-           
-                    <Succes rate ={rate} voted={voted}/>
-                
-            </Wrapper>
-        </Back>
-    )
-    
+                        <Card inv ={invitation}/>
+                        <Score scores={scores} onClick={onClickRate} rate={rate}/>
+                        <ButtonSubmit voted={voted} onClick={onClickVote}/>)
+                        </Wrapper>
+            </Back>)
+    else 
+            return( <Back>
+                         <Wrapper>
+                             <Succes rate ={rate}/>
+                         </Wrapper>
+                    </Back> )
 }
 
 export default Box;
