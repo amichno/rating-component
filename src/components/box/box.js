@@ -85,7 +85,7 @@ const Box = () =>{
         
         <Back>
             <Wrapper>
-                    <Logo />
+                    <Logo/>
                     <Card inv ={invitation}/>
                     <Score scores={scores} onClick={onClickRate} rate={rate}/>
                     <ButtonSubmit voted={voted} onClick={onClickVote}/>
