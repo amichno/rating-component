@@ -5,6 +5,8 @@ import Card from "../card/card";
 import Score from "../score/score";
 import { invitation } from "../../data/invitationText";
 import { scores } from "../../data/rating";
+import ButtonSubmit from "../ButtonSubmit/buttonsubmit";
+import Succes from "../Succes/succes";
 
 const Back = styled.div`
     background-color: black;
@@ -41,8 +43,8 @@ const Wrapper = styled.div`
     overflow-y: scroll;
     min-width: 350px;
     max-width: 450px;
-    min-height:350px;
-    max-height: 450px;
+    min-height: 400px;
+    max-height: 550px;
     @media (max-width: 375px) {
         width: 95%;
         height: 50%;
@@ -69,20 +71,29 @@ const Wrapper = styled.div`
 const Box = () =>{
 
     const [rate, setRate] = useState(0);
+    const [voted, setVoted] = useState('none');
 
     function onClickRate(newRate){
        setRate(newRate)
-       //console.log('setrate4 '+newRate)
+    }
+
+    function onClickVote(){
+        setVoted('flex');
     }
 
     return(
         
         <Back>
             <Wrapper>
+                    <Logo />
+                    <Card inv ={invitation}/>
+                    <Score scores={scores} onClick={onClickRate} rate={rate}/>
+                    <ButtonSubmit voted={voted} onClick={onClickVote}/>
+                    
+            
+           
+                    <Succes rate ={rate} voted={voted}/>
                 
-                <Logo />
-                <Card inv ={invitation}/>
-                <Score scores={scores} onClick={onClickRate} rate={rate}/>
             </Wrapper>
         </Back>
     )
