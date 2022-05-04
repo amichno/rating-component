@@ -22,6 +22,7 @@ const Button = styled.button`
     &:hover{
         color:hsl(25, 97%, 53%);
         background-color: white;
+        transition:0.3s;
     }
 `;
 

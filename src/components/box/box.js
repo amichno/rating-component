@@ -78,7 +78,9 @@ const Box = () =>{
     }
 
     function onClickVote(){
-        setVoted('voted');
+        
+        if(rate)
+            setVoted('voted');
     }
 
 
@@ -89,7 +91,7 @@ const Box = () =>{
                     <Logo/>
                         <Card inv ={invitation}/>
                         <Score scores={scores} onClick={onClickRate} rate={rate}/>
-                        <ButtonSubmit voted={voted} onClick={onClickVote}/>)
+                        <ButtonSubmit voted={voted} onClick={onClickVote}/>
                         </Wrapper>
             </Back>)
     else 

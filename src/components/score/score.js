@@ -20,20 +20,10 @@ const List = styled.ul`
 `;
 
 const ListItem =styled.li`
-    width: 3rem;
-    height: 3rem;
-    background-color: hsl(213, 19%, 18%);    
-    border-radius:100%;
-    color: hsl(217, 12%, 63%);
     display: flex;
     justify-content:center;
     align-items: center;
-    cursor: pointer;
-    z-index:2;
-    &:hover{
-        background-color: hsl(25, 97%, 53%);
-        color: white;
-    }
+   
 `;
 
 const Butto = styled.button`
@@ -46,6 +36,8 @@ const Butto = styled.button`
     &:hover{
         background-color: hsl(25, 97%, 53%);
         color: white;
+        transition: 0.5s;
+        border-radius: 100%;
     }
 `;
 
@@ -59,6 +51,7 @@ const ButtoActive = styled.button`
     &:hover{
         background-color: hsl(25, 97%, 53%);
         color: white;
+
     }
 `;
 
